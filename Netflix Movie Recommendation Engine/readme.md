@@ -12,23 +12,21 @@ This project implements a personalized movie recommendation system inspired by N
 - Surprise (SVD, BaselineOnly)
 
 🧠 Approach & Methodology
-- Used user–movie rating interactions to model preferences (explicit feedback)
--- Performed data preprocessing and filtering:
-- Removed low-activity users (minimum 20 ratings)
-- Removed rarely rated movies (minimum 50 ratings)
+- Used user–movie rating interactions to model preferences
+- Performed data preprocessing and filtering:
+  - Removed low-activity users 
+  - Removed rarely rated movies 
 - Neglected the date feature to focus on pure collaborative filtering
 - Applied SVD from the Surprise library to decompose the user–item matrix into latent factors
 - Tuned key SVD hyperparameters:
--   n_factors, n_epochs, learning rate, and regularization
+  - n_factors, n_epochs, learning rate, and regularization
 - Evaluated performance using 3-fold cross-validation
 
-📊 Model Performance
-Model	RMSE
+📊 Model Performance: Model	RMSE
 - Baseline (user + item bias)	: 0.9090
 - Tuned SVD Model	: 0.9084
-
-- The SVD model consistently outperformed the baseline, confirming the presence of latent preference patterns
-- The marginal improvement highlights the high data sparsity and strong baseline bias signals in the dataset
+  - The SVD model consistently outperformed the baseline, confirming the presence of latent preference patterns
+  - The marginal improvement highlights the high data sparsity and strong baseline bias signals in the dataset
 
 ⭐ Key Results
 - Generated accurate rating predictions for unseen user–movie pairs
@@ -36,8 +34,7 @@ Model	RMSE
 - Achieved stable performance across cross-validation folds
 - Demonstrated scalable recommendation modeling on 10M+ ratings
 
-💼 Business Impact
-A recommendation system like this can help streaming platforms such as Netflix to:
+💼 Business Impact: A recommendation system like this can help streaming platforms such as Netflix to:
 - Improve content discovery through personalization
 - Increase watch time and user engagement
 - Reduce decision fatigue for users
